@@ -51,7 +51,7 @@ Alignment with Upper Ontologies and Domain Onotologies
     * This is an established ontology.
     * Type: Upper Otnology
 
-Example Queries
+Example SPARQL Queries
 ==========
 QUERY_1 (Get all standards)
     PREFIX mns: <http://example.org/ontology#>
