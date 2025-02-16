@@ -14,7 +14,27 @@ The MnS Ontology aims to:
 * Facilitate querying and exploration of (BIM and releted) standards' metadata and relationships.
 * Promote interoperability and integration of standards with other datasets.
 * Establish a Link between the metadata of standards and the exisitng ontologies in the construction domain.
-* In the long-term, MnS ontology aims to bridge the BIM Stnadards Landscape Explorer data and tool with the Built Environment Lookup Service (BE-OLS), which is also dveloped by the M&S committee. 
+* In the long-term, MnS ontology aims to bridge the BIM Stnadards Landscape Explorer data and tool with the Built Environment Lookup Service (BE-OLS), which is also dveloped by the M&S committee.
+
+Motivation
+==========
+
+The following table shows how different properties are reused from the STO and OMV ontologies, as well as the new MnS object properties. 
+| Property                      | SubProperty                        | Domain             | Range                 |
+|-------------------------------|-------------------------------------|--------------------|-----------------------|
+| mns:relatedToPhase            |                                     | sto:publication    | mns:projectPhase      |
+| mns:relatedToRole             |                                     | sto:publication    | mns:role              |
+| mns:relatedToTopic            |                                     | sto:publication or omv:ontology | mns:topic |
+|                               | mns:essentiallyRelatedToTopic       | sto:publication    | mns:topic             |
+|                               | mns:implicitlyRelatedToTopic        | sto:publication    | mns:topic             |
+|                               | mns:relevantlyRelatedToTopic        | sto:publication    | mns:topic             |
+| mns:references                |                                     | sto:publication    | sto:publication       |
+|                               | mns:informativelyReferences         | sto:publication    | sto:publication       |
+|                               | mns:normativelyReferences           | sto:publication    | sto:publication       |
+| sto:hasTechnicalCommittee     |                                     | sto:publication    | sto:TechnicalCommittee|
+| sto:hasDomain                 |                                     | sto:publication    | sto:domain            |
+| omv:hasDomain                 |                                     | omv:ontology       | omv:ontologyDomain    |
+
 
 Alignment with Upper Ontologies and Domain Onotologies
 ==========
