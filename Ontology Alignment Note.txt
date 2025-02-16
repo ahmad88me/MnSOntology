@@ -1,0 +1,34 @@
+Ontology Acronym: STO
+Name: Standards Ontology
+Description: Captures and connects various standards, their publishers and content. It has a good coverage of terminologies. But data properties can be sometimes difficult to use.
+This is an established ontology.
+Domain: General
+
+
+Ontology Acronym: SSOS
+Name: The Standards Specific Ontology
+Description: Defines specific aspects of standards.
+It has good data properties but few classes and object properties.
+This is a proposed ontology. 
+Domain: General
+
+
+Ontology Acronym: DICA
+Name: Digital Construction - agents
+Description: Focuses on roles and responsibilities within digital construction processes and projects.
+This is an established ontology.
+Domain: Built Environment
+
+
+Ontology Acronym: OMV
+Name: Ontology Metadata Vocabularies
+Description: Provides metadata properties to describe and manage ontologies.
+This is an established ontology. 
+Domain: General
+
+Ontology Acronym: FOAF
+Name: Friend of a Friend
+Description: Models social networks, people and their activities.
+This is an established ontology.
+Domain: General
+
