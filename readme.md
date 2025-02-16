@@ -51,6 +51,23 @@ Data Properties
 | sto:hasOfficialResource      | sto:publication| xsd:anyURI   |
 
 
+Individuals
+==========
+
+| dica:agent (mns:Role) | mns:Phase                | mns:Topic                     | mns:Topic                     | sto:Technical Committee | sto:Domain              |
+|------------------------|--------------------------|--------------------------------|--------------------------------|-------------------------|-------------------------|
+| mns:Client            | mns:Briefing            | mns:InformationDeliveryManual | mns:BIMExecutionPlan          | mns:CEN/TC442           | mns:Construction        |
+| mns:Contractor        | mns:Decommissioning     | mns:InformationDeliveryPlan   | mns:Classification            | mns:ISO/TC10/SC8       | mns:FM                  |
+| mns:Designer          | mns:Design              | mns:InformationDeliverySpecification | mns:COBie                | mns:ISO/TC59/SC13      | mns:GIS                 |
+| mns:FacilityManager   | mns:Handover            | mns:InformationManagement     | mns:CommonDataEnvironment     |                         | mns:HIS                 |
+| mns:Manufacturer      | mns:ManufacturingConstruction | mns:InformationModel    | mns:DataDictionary             |                         | mns:IndustrialAutomation|
+| mns:PermitAgency      | mns:OperationMaintenance | mns:InformationRequirements | mns:DataTemplate               |                         | mns:Other               |
+| mns:ProjectManager    | mns:Procurement         | mns:LevelOfInformationNeed   | mns:GeographicInformationSystem |                         | mns:PM                  |
+| mns:SoftwareDeveloper | mns:StrategicDefinition | mns:LinkedData               | mns:IFC                        |                         | mns:QualityManagement   |
+|                        |                          | mns:InformationContainer     |                                |                         | mns:Sustainability      |
+|                        |                          | mns:TechnicalProductDescription |                             |                         |  mns:BIM               |
+|                        |                          | mns:BIM                     |                                |                         |                         |
+
 
 Alignment with Upper Ontologies and Domain Onotologies
 ==========
