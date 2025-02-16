@@ -199,5 +199,5 @@ Contact Us
 
 References
 ==========
-BIM Standards Landscape Explorer: https://ec-3.org/BIM-Standards-Landscape-Explorer.html
-Built Environment Ontology Lookup Service: https://cyberbuildlab.github.io/BE-OLS/
+* BIM Standards Landscape Explorer: https://ec-3.org/BIM-Standards-Landscape-Explorer.html
+* Built Environment Ontology Lookup Service: https://cyberbuildlab.github.io/BE-OLS/
