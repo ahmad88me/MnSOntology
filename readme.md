@@ -1,7 +1,7 @@
 About Modelling and Standards Ontology (MnS)
 ===================
 While MnS extends the foundational work of the EC3 BIM Standards Landscape Explorer by enbling the development of an OWL-based representation of the dataset, it also bridges the gap between natural language documentation of standards and machine-readable, queryable representations.  
-In essence, the MnS ontology reuses other ontologies when possible. The effort was to add value by developing an ontology that (1) enables our existing relatinal dataset to be 
+In essence, the MnS ontology reuses other ontologies when possible. The effort was to add value by developing an ontology that (1) enables our existing relatinal dataset to become a knoedlge graph and easily accessible and linked to the existing data on the Web, and (2) enables others to understand and query our data for their progress in using BIM and digital constructi9on standards. 
 
 
 
@@ -21,39 +21,37 @@ The MnS Ontology aims to:
 Alignment with Upper Ontologies and Domain Onotologies
 ==========
 * Ontology Acronym: STO
-* * Name: Standards Ontology
-Description: Captures and connects various standards, their publishers and content. It has a good coverage of terminologies. But data properties can be sometimes difficult to use.
-This is an established ontology.
-Type: Upper Otnology
+  * Name: Standards Ontology
+  * Description: Captures and connects various standards, their publishers and content. It has a good coverage of terminologies. But data properties can be sometimes difficult to use.
+  * This is an established ontology.
+  * Type: Upper Otnology
 
 
+* Ontology Acronym: SSOS
+    * Name: The Standards Specific Ontology
+    * Description: Defines specific aspects of standards. It has good data properties but few classes and object properties.
+    * This is a proposed ontology.
+    * Type: N/A
 
-Ontology Acronym: SSOS
-Name: The Standards Specific Ontology
-Description: Defines specific aspects of standards.
-It has good data properties but few classes and object properties.
-This is a proposed ontology. 
-Type: N/A
-
-Ontology Acronym: DICA
-Name: Digital Construction - agents
-Description: Focuses on roles and responsibilities within digital construction processes and projects.
-This is an established ontology.
-Domain: Built Environment
-Type: Domain Otnology
+* Ontology Acronym: DICA
+    * Name: Digital Construction - agents
+    * Description: Focuses on roles and responsibilities within digital construction processes and projects.
+    * This is an established ontology.
+    * Domain: Built Environment
+    * Type: Domain Otnology
 
 
-Ontology Acronym: OMV
-Name: Ontology Metadata Vocabularies
-Description: Provides metadata properties to describe and manage ontologies.
-This is an established ontology. 
-Type: Upper Otnology
+* Ontology Acronym: OMV
+    * Name: Ontology Metadata Vocabularies
+    * Description: Provides metadata properties to describe and manage ontologies.
+    * This is an established ontology.
+    * Type: Upper Otnology
 
-Ontology Acronym: FOAF
-Name: Friend of a Friend
-Description: Models social networks, people and their activities.
-This is an established ontology.
-Type: Upper Otnology
+* Ontology Acronym: FOAF
+    * Name: Friend of a Friend
+    * Description: Models social networks, people and their activities.
+    * This is an established ontology.
+    * Type: Upper Otnology
 
 Example Queries
 ==========
