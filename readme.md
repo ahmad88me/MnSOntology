@@ -15,7 +15,16 @@ Widoco will create 3 different folders:
 |-sections (folder with the different sections of the documentation, separated for easy editing. Just edit one and the main page will be updated)
 
 
+Motivation
+==========
+Despite the critical role of standards in the construction industry, their adoption is hindered by accessibility challenges, natural language complexity, and a lack of machine-readable formats. The BIM Landscape Stanadrds Explorer initiative by the M&S committee aimed to address parts of these issues/ BIM Landscape Stanadrds Explorer is connected to a carefully anlysed and curated dataset of BIM stndards and their metadata, shaped through significant over the past couple of years. However, the data was structured in a relational database on the one hand. One  other hand, the data was not machine-readble, not connected to the other datasets and not easily queryable despite being publicly available.
+The MnS Ontology aims to:
 
+* Provide a formal, semantic structure for BIM-related standards, although it can be also adapted by other domains.
+* Facilitate querying and exploration of (BIM and releted) standards' metadata and relationships.
+* Promote interoperability and integration of standards with other datasets.
+* Establish a Link between the metadata of standards and the exisitng ontologies in the construction domain.
+* In the long-term, MnS ontology aims to bridge the BIM Stnadards Landscape Explorer data and tool with the Built Environment Lookup Service (BE-OLS), which is also dveloped by the M&S committee. 
 
 Alignment with Upper Ontologies and Domain Onotologies
 ==========
