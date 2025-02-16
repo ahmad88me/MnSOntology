@@ -21,7 +21,7 @@ The MnS Ontology aims to:
 Alignment with Upper Ontologies and Domain Onotologies
 ==========
 * Ontology Acronym: STO
-Name: Standards Ontology
+* * Name: Standards Ontology
 Description: Captures and connects various standards, their publishers and content. It has a good coverage of terminologies. But data properties can be sometimes difficult to use.
 This is an established ontology.
 Type: Upper Otnology
