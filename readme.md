@@ -1,7 +1,7 @@
 About Modelling and Standards Ontology (MnS)
 ===================
 While MnS extends the foundational work of the EC3 BIM Standards Landscape Explorer by enbling the development of an OWL-based representation of the dataset, it also bridges the gap between natural language documentation of standards and machine-readable, queryable representations.  
-
+In essence, the MnS ontology reuses other ontologies when possible. The effort was to add value by developing an ontology that (1) enables our existing relatinal dataset to be 
 
 
 
@@ -20,7 +20,7 @@ The MnS Ontology aims to:
 
 Alignment with Upper Ontologies and Domain Onotologies
 ==========
-Ontology Acronym: STO
+* Ontology Acronym: STO
 Name: Standards Ontology
 Description: Captures and connects various standards, their publishers and content. It has a good coverage of terminologies. But data properties can be sometimes difficult to use.
 This is an established ontology.
