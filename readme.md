@@ -72,9 +72,6 @@ QUERY_1 (Get all standards)
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 QUERY_2 (Get CEN standards)
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
 
     SELECT ?standard ?title
     WHERE {
@@ -89,10 +86,6 @@ QUERY_2 (Get CEN standards)
 -------------------------------------------------------------------------------------------------
 QUERY_3 (Get ISO standards that are not CEN)
 
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
-
     SELECT ?standard ?number
     WHERE {
       ?standard a sto:standard ;
@@ -105,10 +98,7 @@ QUERY_3 (Get ISO standards that are not CEN)
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 QUERY_4 (Find standards related to role)
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
-    
+
     SELECT ?standard ?title
     WHERE {
       ?standard a sto:standard ;
@@ -118,10 +108,7 @@ QUERY_4 (Find standards related to role)
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 QUERY_5 (Find standards related to phase)
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
-    
+
     SELECT ?standard ?number
     WHERE {
       ?standard a sto:standard ;
@@ -133,9 +120,6 @@ QUERY_5 (Find standards related to phase)
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 QUERY_6 (Find all standards that are informatively referenced in ISO 19650-1).
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
 
     SELECT DISTINCT ?referencedStandard ?title
     WHERE {
@@ -147,9 +131,6 @@ QUERY_6 (Find all standards that are informatively referenced in ISO 19650-1).
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 QUERY_7 (Find standards that are essentially related to a specific topic but not related to another one at all)
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
     
     SELECT DISTINCT ?standard ?number ?title
     WHERE {
@@ -186,9 +167,6 @@ QUERY_8 (Find all ontologies that are relevant to a standard related to a specif
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 QUERY_9 (Find all standards in the BIM domain that are published before 2018). 
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
 
     SELECT ?standard ?number ?firstPublicationDate
     WHERE {
@@ -203,10 +181,6 @@ QUERY_9 (Find all standards in the BIM domain that are published before 2018).
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 QUERY_10 (Which standards are normatively referenced by a standard that is related to the phase X?).
-    PREFIX mns: <http://example.org/ontology#>
-    PREFIX sto: <https://w3id.org/i40/sto#>
-    PREFIX base: <http://example.org/data#>
-
 
     SELECT DISTINCT ?normativelyReferencedStandard ?number
     WHERE {
