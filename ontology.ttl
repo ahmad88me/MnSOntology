@@ -1,0 +1,529 @@
+@prefix : <http://example.org/mns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/mns#> .
+
+<http://example.org/mns> rdf:type owl:Ontology ;
+                          owl:versionIRI <http://example.org/mns/1.0> ;
+                          owl:imports <http://omv.ontoware.org/2005/05/ontology> ,
+                                      <https://w3id.org/i40/sto#> ,
+                                      <https://www.niso.org/standards-committees/ssos/ssos01.owl> ;
+                          <http://purl.org/dc/terms/contributor> "Marzia Bolpagni" ;
+                          <http://purl.org/dc/terms/creator> "Goran Sibenik"@en ,
+                                                             "Arghavan Akbarieh" ;
+                          <http://purl.org/dc/terms/issued> 15022025 ;
+                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                          <http://purl.org/dc/terms/title> "Modelling and Standards Ontology" ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "MnS" ;
+                          rdfs:label "Modelling and Standards Ontology" ;
+                          rdfs:seeAlso "BIM Standards Landscape Explorer: https://ec-3.org/BIM-Standards-Landscape-Explorer.html" ;
+                          owl:versionInfo 1.0 ;
+                          <https://w3id.org/i40/sto#publisher> "EC3 M&S Committee" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle> rdf:type owl:AnnotationProperty ;
+                                                                      rdfs:domain <https://w3id.org/i40/sto#Standard> .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#EssentiallyRelatedToTopic
+<http://www.co-ode.org/ontologies/ont.owl#EssentiallyRelatedToTopic> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#relatedToTopic> ;
+                                                                     rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                                     rdfs:range <http://example.org/ontology#Topic> ;
+                                                                     rdfs:label "Essentially Related To Topic" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#ImplicitlyRelatedToTopic
+<http://www.co-ode.org/ontologies/ont.owl#ImplicitlyRelatedToTopic> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#relatedToTopic> ;
+                                                                    rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                                    rdfs:range <http://example.org/ontology#Topic> ;
+                                                                    rdfs:label "Implicitly Related To Topic" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#InformativelyReferences
+<http://www.co-ode.org/ontologies/ont.owl#InformativelyReferences> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#references> ;
+                                                                   rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                                   rdfs:range <https://w3id.org/i40/sto#Publication> ;
+                                                                   rdfs:label "Informatively References" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#NormativeReference
+<http://www.co-ode.org/ontologies/ont.owl#NormativeReference> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#references> ;
+                                                              rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                              rdfs:range <https://w3id.org/i40/sto#Publication> ;
+                                                              rdfs:label "Normatively References" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#RelevantlyRelatedToTopic
+<http://www.co-ode.org/ontologies/ont.owl#RelevantlyRelatedToTopic> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#relatedToTopic> ;
+                                                                    rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                                    rdfs:range <http://example.org/ontology#Topic> ;
+                                                                    rdfs:label "Relevantly Related To Topic" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isReferencedBy
+<http://www.co-ode.org/ontologies/ont.owl#isReferencedBy> rdf:type owl:ObjectProperty ;
+                                                          owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#references> ;
+                                                          rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                          rdfs:range <https://w3id.org/i40/sto#Publication> ;
+                                                          rdfs:label "is Referenced By" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#references
+<http://www.co-ode.org/ontologies/ont.owl#references> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                      rdfs:range <https://w3id.org/i40/sto#Publication> ;
+                                                      rdfs:label "References" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#relatedToPhase
+<http://www.co-ode.org/ontologies/ont.owl#relatedToPhase> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                          rdfs:range <http://example.org/ontology#ProjectPhase> ;
+                                                          rdfs:label "Related To Phase" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#relatedToRole
+<http://www.co-ode.org/ontologies/ont.owl#relatedToRole> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                                                         rdfs:range <http://example.org/ontology#Role> ;
+                                                         rdfs:label "Related To Role" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#relatedToTopic
+<http://www.co-ode.org/ontologies/ont.owl#relatedToTopic> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain [ rdf:type owl:Class ;
+                                                                        owl:unionOf ( <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                                      <https://w3id.org/i40/sto#Publication>
+                                                                                    )
+                                                                      ] ;
+                                                          rdfs:range <http://example.org/ontology#Topic> ;
+                                                          rdfs:label "Related To Topic" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/ontology#hasAbstract
+<http://example.org/ontology#hasAbstract> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:label "has Abstract" .
+
+
+###  http://example.org/ontology#hasCurrentPublicationDate
+<http://example.org/ontology#hasCurrentPublicationDate> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                                                        rdfs:range xsd:date ;
+                                                        rdfs:label "has Current Publication Date" .
+
+
+###  http://example.org/ontology#hasStandardNumber
+<http://example.org/ontology#hasStandardNumber> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:label "has Standard Number" .
+
+
+###  http://example.org/ontology#isCEN
+<http://example.org/ontology#isCEN> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                                    rdfs:range xsd:boolean ;
+                                    rdfs:label "is CEN Standard" .
+
+
+###  http://example.org/ontology#isISO
+<http://example.org/ontology#isISO> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                                    rdfs:range xsd:boolean ;
+                                    rdfs:label "is ISO Standard" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#contributesToSDG
+<http://www.co-ode.org/ontologies/ont.owl#contributesToSDG> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:label "contributes To Sustainable Development Goal" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasFirstPublicationDate
+<http://www.co-ode.org/ontologies/ont.owl#hasFirstPublicationDate> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                                                                   rdfs:range xsd:date ;
+                                                                   rdfs:label "has First Publication Date" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/ontology#ProjectPhase
+<http://example.org/ontology#ProjectPhase> rdf:type owl:Class ;
+                                           <http://purl.org/dc/terms/description> """A project phase indicates the phase of the project, for which a standard is relevant to.
+In the context of the EC3 BIM  Stanadrds Landscape Explorer, the project phases corresponds to the RIBA plan of work."""@en ;
+                                           rdfs:comment "Project Phase" .
+
+
+###  http://example.org/ontology#Role
+<http://example.org/ontology#Role> rdf:type owl:Class ;
+                                   owl:equivalentClass <https://w3id.org/digitalconstruction/0.5/Agents#Agent> .
+
+
+###  http://example.org/ontology#Topic
+<http://example.org/ontology#Topic> rdf:type owl:Class ;
+                                    rdfs:label "Topic" .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Ontology
+<http://omv.ontoware.org/2005/05/ontology#Ontology> rdf:type owl:Class .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyDomain
+<http://omv.ontoware.org/2005/05/ontology#OntologyDomain> rdf:type owl:Class ;
+                                                          owl:equivalentClass <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#CENTechnicalCommittee
+<http://www.co-ode.org/ontologies/ont.owl#CENTechnicalCommittee> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://w3id.org/i40/sto#TechnicalCommittee> ;
+                                                                 rdfs:label "CEN Technical Committee" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#ISOTechnicalCommittee
+<http://www.co-ode.org/ontologies/ont.owl#ISOTechnicalCommittee> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://w3id.org/i40/sto#TechnicalCommittee> ;
+                                                                 rdfs:label "ISO Technical Committee" .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Agents#Agent
+<https://w3id.org/digitalconstruction/0.5/Agents#Agent> rdf:type owl:Class ;
+                                                        <http://purl.org/dc/terms/description> "This class defines the roles that actors have. It is not necessarily the job title, but their role in the project." .
+
+
+###  https://w3id.org/i40/sto#Domain
+<https://w3id.org/i40/sto#Domain> <http://purl.org/dc/terms/description> "Domains in the EC3 Standards Landscape Explorer are defined by the M&S committee" .
+
+
+###  https://w3id.org/i40/sto#Standard
+<https://w3id.org/i40/sto#Standard> <http://purl.org/dc/terms/description> "A standard is subclass of a publication." .
+
+
+###  https://w3id.org/i40/sto#TechnicalCommittee
+<https://w3id.org/i40/sto#TechnicalCommittee> rdfs:label "Technical Committee" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/ontology#Anchor
+<http://example.org/ontology#Anchor> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#BIM
+<http://example.org/ontology#BIM> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#BIMExecutionPlan
+<http://example.org/ontology#BIMExecutionPlan> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#Briefing
+<http://example.org/ontology#Briefing> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#CEN_TR_17439
+<http://example.org/ontology#CEN_TR_17439> rdf:type owl:NamedIndividual ;
+                                           <http://example.org/ontology#hasAbstract> "The scope of this guidance is deliberately restricted..." ;
+                                           <http://example.org/ontology#hasCurrentPublicationDate> "2020-06-10"^^xsd:date ;
+                                           <http://example.org/ontology#hasStandardNumber> "CEN/TR 17439" ;
+                                           <http://example.org/ontology#isCEN> "true"^^xsd:boolean ;
+                                           <http://example.org/ontology#isISO> "false"^^xsd:boolean .
+
+
+###  http://example.org/ontology#COBie
+<http://example.org/ontology#COBie> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#Classification
+<http://example.org/ontology#Classification> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#Client
+<http://example.org/ontology#Client> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#CommonDataEnvironment
+<http://example.org/ontology#CommonDataEnvironment> rdf:type owl:NamedIndividual ,
+                                                             <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#Construction
+<http://example.org/ontology#Construction> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#Contractor
+<http://example.org/ontology#Contractor> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#DataDictionary
+<http://example.org/ontology#DataDictionary> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#DataTemplate
+<http://example.org/ontology#DataTemplate> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#Decommissioning
+<http://example.org/ontology#Decommissioning> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#Design
+<http://example.org/ontology#Design> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#Designer
+<http://example.org/ontology#Designer> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#FM
+<http://example.org/ontology#FM> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#FacilityManager
+<http://example.org/ontology#FacilityManager> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#GIS
+<http://example.org/ontology#GIS> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#GeographicInformationSystem
+<http://example.org/ontology#GeographicInformationSystem> rdf:type owl:NamedIndividual ,
+                                                                   <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#HIS
+<http://example.org/ontology#HIS> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#Handover
+<http://example.org/ontology#Handover> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#IFC
+<http://example.org/ontology#IFC> rdf:type owl:NamedIndividual ,
+                                           <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#IndustrialAutomation
+<http://example.org/ontology#IndustrialAutomation> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#InformationContainer
+<http://example.org/ontology#InformationContainer> rdf:type owl:NamedIndividual ,
+                                                            <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#InformationDeliveryManual
+<http://example.org/ontology#InformationDeliveryManual> rdf:type owl:NamedIndividual ,
+                                                                 <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#InformationDeliveryPlan
+<http://example.org/ontology#InformationDeliveryPlan> rdf:type owl:NamedIndividual ,
+                                                               <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#InformationDeliverySpecification
+<http://example.org/ontology#InformationDeliverySpecification> rdf:type owl:NamedIndividual ,
+                                                                        <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#InformationManagement
+<http://example.org/ontology#InformationManagement> rdf:type owl:NamedIndividual ,
+                                                             <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#InformationModel
+<http://example.org/ontology#InformationModel> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#InformationRequirements
+<http://example.org/ontology#InformationRequirements> rdf:type owl:NamedIndividual ,
+                                                               <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#LevelOfInformationNeed
+<http://example.org/ontology#LevelOfInformationNeed> rdf:type owl:NamedIndividual ,
+                                                              <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#LinkedData
+<http://example.org/ontology#LinkedData> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#Manufacturer
+<http://example.org/ontology#Manufacturer> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#ManufacturingConstruction
+<http://example.org/ontology#ManufacturingConstruction> rdf:type owl:NamedIndividual ,
+                                                                 <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#ModelViewDefinition
+<http://example.org/ontology#ModelViewDefinition> rdf:type owl:NamedIndividual ,
+                                                           <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#OperationMaintenance
+<http://example.org/ontology#OperationMaintenance> rdf:type owl:NamedIndividual ,
+                                                            <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#Other
+<http://example.org/ontology#Other> rdf:type owl:NamedIndividual ,
+                                             <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#PM
+<http://example.org/ontology#PM> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#PermitAgency
+<http://example.org/ontology#PermitAgency> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#Procurement
+<http://example.org/ontology#Procurement> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#ProjectManager
+<http://example.org/ontology#ProjectManager> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#QualityManagement
+<http://example.org/ontology#QualityManagement> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#SoftwareDeveloper
+<http://example.org/ontology#SoftwareDeveloper> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/ontology#Role> .
+
+
+###  http://example.org/ontology#SoftwareImplementation
+<http://example.org/ontology#SoftwareImplementation> rdf:type owl:NamedIndividual ,
+                                                              <http://example.org/ontology#Topic> .
+
+
+###  http://example.org/ontology#StrategicDefinition
+<http://example.org/ontology#StrategicDefinition> rdf:type owl:NamedIndividual ,
+                                                           <http://example.org/ontology#ProjectPhase> .
+
+
+###  http://example.org/ontology#Sustainability
+<http://example.org/ontology#Sustainability> rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/ontology#TechnicalProductDescription
+<http://example.org/ontology#TechnicalProductDescription> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#CEN
+<http://www.co-ode.org/ontologies/ont.owl#CEN> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/i40/sto#StandardOrganization> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#ISO
+<http://www.co-ode.org/ontologies/ont.owl#ISO> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/i40/sto#StandardOrganization> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442
+<http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/ont.owl#CENTechnicalCommittee> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#ISO/TC_10/SC_8
+<http://www.co-ode.org/ontologies/ont.owl#ISO/TC_10/SC_8> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl#ISOTechnicalCommittee> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#ISO/TC_59/SC_13
+<http://www.co-ode.org/ontologies/ont.owl#ISO/TC_59/SC_13> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl#ISOTechnicalCommittee> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#InformativeReference> rdfs:label "Informative Reference" .
+
+
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#NormativeReference> rdfs:label "Normative Reference" .
+
+
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#StandardReference> rdfs:label "Standard Reference" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
