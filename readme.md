@@ -38,15 +38,18 @@ The following table shows how different properties are reused from the STO and O
 Data Properties
 ==========
 
-| Datatype Property            | Domain         | Range       |
-|------------------------------|----------------|-------------|
-| mns:hasAbstract                  | sto:standard   | xsd:string  |
-| mns:hasCurrentPublicationDate    | sto:standard   | xsd:date    |
-| mns:hasFirstPublicationDate      | sto:standard   | xsd:date    |
-| mns:hasStandardNumber            | sto:standard   | xsd:string  |
-| mns:contributesToSDG             | sto:standard   | xsd:integer |
-| mns:isCEN                        | sto:standard   | xsd:boolean |
-| mns:isISO                        | sto:standard   | xsd:boolean |
+| Datatype Property            | Domain         | Range        |
+|------------------------------|----------------|--------------|
+| mns:hasAbstract              | sto:standard   | xsd:string   |
+| mns:hasCurrentPublicationDate| sto:standard   | xsd:date     |
+| mns:hasFirstPublicationDate  | sto:standard   | xsd:date     |
+| mns:hasStandardNumber        | sto:standard   | xsd:string   |
+| mns:contributesToSDG         | sto:standard   | xsd:integer  |
+| mns:isCEN                    | sto:standard   | xsd:boolean  |
+| mns:isISO                    | sto:standard   | xsd:boolean  |
+| sto:hasOntology              | sto:publication| xsd:string   |
+| sto:hasOfficialResource      | sto:publication| xsd:anyURI   |
+
 
 
 Alignment with Upper Ontologies and Domain Onotologies
