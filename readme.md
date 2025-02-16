@@ -1,4 +1,4 @@
-About Modelling and Standards Ontology
+About Modelling and Standards Ontology (MnS)
 ===================
 While MnS extends the foundational work of the EC3 BIM Standards Landscape Explorer by enbling the development of an OWL-based representation of the dataset, it also bridges the gap between natural language documentation of standards and machine-readable, queryable representations.  
 
