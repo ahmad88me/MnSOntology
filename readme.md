@@ -200,3 +200,4 @@ https://ec-3.org/governance/technical-committees/modelling-standards-committee/
 References
 ==========
 BIM Standards Landscape Explorer: https://ec-3.org/BIM-Standards-Landscape-Explorer.html
+Built Environment Ontology Lookup Service: https://cyberbuildlab.github.io/BE-OLS/
