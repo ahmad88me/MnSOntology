@@ -1,0 +1,158 @@
+QUERY_1 (Get all standards)
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+
+    SELECT ?standard ?title
+    WHERE {
+      ?standard a sto:standard ;
+                mns:hasTitle ?title .
+    }
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_2 (Get CEN standards)
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+
+    SELECT ?standard ?title
+    WHERE {
+    ?standard a sto:standard ;
+                mns:hasTitle ?title ;
+                mns:isCEN ?isCEN .
+    FILTER(?isCEN = "Yes")
+    }
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_3 (Get ISO standards that are not CEN)
+
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+
+    SELECT ?standard ?number
+    WHERE {
+      ?standard a sto:standard ;
+                mns:hasStandardNumber ?number ;
+                mns:isISO "Yes" .
+      FILTER NOT EXISTS { ?standard mns:isCEN "Yes" . }
+    }
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_4 (Find standards related to role)
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+    
+    SELECT ?standard ?title
+    WHERE {
+      ?standard a sto:standard ;
+                mns:hasTitle ?title ;
+                mns:relatedToRole mns:Client .
+    }
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_5 (Find standards related to phase)
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+    
+    SELECT ?standard ?number
+    WHERE {
+      ?standard a sto:standard ;
+                mns:hasStandardNumber ?number ;
+                mns:relatedToPhase mns:Decommissioning .
+    }
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_6 (Find all standards that are informatively referenced in ISO 19650-1).
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+
+    SELECT DISTINCT ?referencedStandard ?title
+    WHERE {
+    base:ISO_19650-1 mns:InformativelyReferences ?referencedStandard .
+    OPTIONAL { ?referencedStandard mns:hasTitle ?title . }
+    }
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_7 (Find standards that are essentially related to a specific topic but not related to another one at all)
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+    
+    SELECT DISTINCT ?standard ?number ?title
+    WHERE {
+      ?standard a sto:standard ;
+                mns:hasStandardNumber ?number ;
+                mns:hasTitle ?title ;
+                mns:EssentiallyRelatedToTopic mns:Data_Dictionary .
+      FILTER NOT EXISTS { ?standard mns:relatedToTopic mns:Information_Container . }
+    }
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_8 (Find all ontologies that are relevant to a standard related to a specific topic). 
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>
+    PREFIX base: <http://example.org/data#>
+    
+    SELECT DISTINCT ?ontology ?name ?description
+    WHERE {
+      ?ontology a omv:Ontology ;
+                omv:name ?name ;
+                omv:description ?description ;
+                mns:relatedToTopic mns:Data_Dictionary .
+      FILTER EXISTS {
+        ?standard a sto:standard ;
+                  mns:relatedToTopic mns:Data_Dictionary .
+      }
+    }
+
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_9 (Find all standards in the BIM domain that are published before 2018). 
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+
+    SELECT ?standard ?number ?firstPublicationDate
+    WHERE {
+      ?standard a sto:standard ;
+                mns:hasStandardNumber ?number ;
+                mns:hasFirstPublicationDate ?firstPublicationDate ;
+                sto:hasDomain base:BIM .
+      FILTER (?firstPublicationDate < "2018-01-01"^^xsd:date)
+}
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+QUERY_10 (Which standards are normatively referenced by a standard that is related to the phase X?).
+    PREFIX mns: <http://example.org/ontology#>
+    PREFIX sto: <https://w3id.org/i40/sto#>
+    PREFIX base: <http://example.org/data#>
+
+
+    SELECT DISTINCT ?normativelyReferencedStandard ?number
+    WHERE {
+    ?standard a sto:standard ;
+                mns:relatedToPhase mns:Decommissioning ;
+                mns:NormativelyReferences ?normativelyReferencedStandard .
+    ?normativelyReferencedStandard mns:hasStandardNumber ?number.
+    }
