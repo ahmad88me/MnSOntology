@@ -194,8 +194,8 @@ This ontology does not use or reuse any part of the copyrighted content of the I
 
 Contact Us
 ==========
-For any queries, questions, sugestions and comments, please contact us here: 
-https://ec-3.org/governance/technical-committees/modelling-standards-committee/
+*For any queries, questions, sugestions and comments, please contact us here: 
+*https://ec-3.org/governance/technical-committees/modelling-standards-committee/
 
 References
 ==========
