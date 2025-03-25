@@ -18,7 +18,7 @@ The MnS Ontology aims to:
 * Establish a Link between the metadata of standards and the exisitng ontologies in the construction domain.
 * In the long-term, MnS ontology aims to bridge the BIM Stnadards Landscape Explorer data and tool with the Built Environment Lookup Service (BE-OLS), which is also dveloped by the M&S committee.
 
-  <img src="images/DOR_updated.jpg">
+  <img src="images/Modelling and Standards (MNS) ontology.png">
 
 
 Object Properties
