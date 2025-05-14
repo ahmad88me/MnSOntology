@@ -5,7 +5,7 @@ While MnS extends the foundational work of the EC3 BIM Standards Landscape Explo
 In essence, the MnS ontology reuses other ontologies when possible. The intention was to add value by focusing on the way the data makes sense to practitioners in the built environment had they need to use a BIM standard, not on just making an ontology to make standards metadata machine-readable. Therefore, the mns ontology makes the BIM standards data and metadata findable, accessible, interoperable, and reusable (FAIR). The rationale behind developing an ontology was to (1) enable our existing relational dataset to become a knowledge graph and easily accessible and linked to the existing data on the Web, and (2) enable others to understand and query our data for their progress in using BIM and digital construction standards. 
 
 Current Link (to be updated):
-https://z-arghavan.github.io/MnSOntology/
+https://z-arghavan.github.io/MNS/
 
 Motivation
 ==========
