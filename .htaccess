@@ -51,11 +51,11 @@ RewriteEngine On
 
 # Turtle
 RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule ^$ https://yourdomain.org/ontologies/circular.ttl [R=303,L]
+RewriteRule ^$ https://yourdomain.org/ontologies/ontology.ttl [R=303,L]
 
 # RDF/XML
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule ^$ https://yourdomain.org/ontologies/circular.rdf [R=303,L]
+RewriteRule ^$ https://yourdomain.org/ontologies/ontology.rdf [R=303,L]
 
 # Fallback to HTML documentation
-RewriteRule ^$ https://yourdomain.org/ontologies/circular.html [R=303,L]
+RewriteRule ^$ https://yourdomain.org/ontologies/ontology.html [R=303,L]
