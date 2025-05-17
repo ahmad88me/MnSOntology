@@ -1,0 +1,476 @@
+<http://example.org/mns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/mns> <http://www.w3.org/2002/07/owl#versionIRI> <http://example.org/mns/1.0> .
+<http://example.org/mns> <http://www.w3.org/2002/07/owl#imports> <http://omv.ontoware.org/2005/05/ontology> .
+<http://example.org/mns> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/i40/sto#> .
+<http://example.org/mns> <http://www.w3.org/2002/07/owl#imports> <https://www.niso.org/standards-committees/ssos/ssos01.owl> .
+<http://example.org/mns> <http://purl.org/dc/terms/contributor> "Marzia Bolpagni" .
+<http://example.org/mns> <http://purl.org/dc/terms/creator> "Goran Sibenik"@en .
+<http://example.org/mns> <http://purl.org/dc/terms/creator> "Arghavan Akbarieh" .
+<http://example.org/mns> <http://purl.org/dc/terms/issued> "15022025"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/mns> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://example.org/mns> <http://purl.org/dc/terms/title> "Modelling and Standards Ontology" .
+<http://example.org/mns> <http://purl.org/vocab/vann/preferredNamespacePrefix> "MnS" .
+<http://example.org/mns> <http://www.w3.org/2000/01/rdf-schema#label> "Modelling and Standards Ontology" .
+<http://example.org/mns> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "BIM Standards Landscape Explorer: https://ec-3.org/BIM-Standards-Landscape-Explorer.html" .
+<http://example.org/mns> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/mns> <https://w3id.org/i40/sto#publisher> "EC3 M&S Committee" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/mns#essentiallyRelatedToTopic
+<http://example.org/mns#essentiallyRelatedToTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#essentiallyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org/mns#relatedToTopic> .
+<http://example.org/mns#essentiallyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#essentiallyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mns#Topic> .
+<http://example.org/mns#essentiallyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#label> "Essentially Related To Topic" .
+# 
+# http://example.org/mns#implicitlyRelatedToTopic
+<http://example.org/mns#implicitlyRelatedToTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#implicitlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org/mns#relatedToTopic> .
+<http://example.org/mns#implicitlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#implicitlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mns#Topic> .
+<http://example.org/mns#implicitlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#label> "Implicitly Related To Topic" .
+# 
+# http://example.org/mns#informativelyReferences
+<http://example.org/mns#informativelyReferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#informativelyReferences> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org/mns#references> .
+<http://example.org/mns#informativelyReferences> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#informativelyReferences> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#informativelyReferences> <http://www.w3.org/2000/01/rdf-schema#label> "Informatively References" .
+# 
+# http://example.org/mns#isReferencedBy
+<http://example.org/mns#isReferencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#isReferencedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/mns#references> .
+<http://example.org/mns#isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is Referenced By" .
+# 
+# http://example.org/mns#normativelyReference
+<http://example.org/mns#normativelyReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#normativelyReference> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org/mns#references> .
+<http://example.org/mns#normativelyReference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#normativelyReference> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#normativelyReference> <http://www.w3.org/2000/01/rdf-schema#label> "Normatively References" .
+# 
+# http://example.org/mns#references
+<http://example.org/mns#references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#references> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#references> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#references> <http://www.w3.org/2000/01/rdf-schema#label> "References" .
+# 
+# http://example.org/mns#relatedToPhase
+<http://example.org/mns#relatedToPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#relatedToPhase> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#relatedToPhase> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mns#ProjectPhase> .
+<http://example.org/mns#relatedToPhase> <http://www.w3.org/2000/01/rdf-schema#label> "Related To Phase" .
+# 
+# http://example.org/mns#relatedToRole
+<http://example.org/mns#relatedToRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#relatedToRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#relatedToRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mns#Role> .
+<http://example.org/mns#relatedToRole> <http://www.w3.org/2000/01/rdf-schema#label> "Related To Role" .
+# 
+# http://example.org/mns#relatedToTopic
+<http://example.org/mns#relatedToTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#relatedToTopic> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/i40/sto#Publication> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omv.ontoware.org/2005/05/ontology#Ontology> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/mns#relatedToTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mns#Topic> .
+<http://example.org/mns#relatedToTopic> <http://www.w3.org/2000/01/rdf-schema#label> "Related To Topic" .
+# 
+# http://example.org/mns#relevantlyRelatedToTopic
+<http://example.org/mns#relevantlyRelatedToTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mns#relevantlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org/mns#relatedToTopic> .
+<http://example.org/mns#relevantlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://example.org/mns#relevantlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mns#Topic> .
+<http://example.org/mns#relevantlyRelatedToTopic> <http://www.w3.org/2000/01/rdf-schema#label> "Relevantly Related To Topic" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/mns#contributesToSDG
+<http://example.org/mns#contributesToSDG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mns#contributesToSDG> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+<http://example.org/mns#contributesToSDG> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/mns#contributesToSDG> <http://www.w3.org/2000/01/rdf-schema#label> "contributes To Sustainable Development Goal" .
+# 
+# http://example.org/mns#hasAbstract
+<http://example.org/mns#hasAbstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mns#hasAbstract> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+<http://example.org/mns#hasAbstract> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/mns#hasAbstract> <http://www.w3.org/2000/01/rdf-schema#label> "has Abstract" .
+# 
+# http://example.org/mns#hasCurrentPublicationDate
+<http://example.org/mns#hasCurrentPublicationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mns#hasCurrentPublicationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+<http://example.org/mns#hasCurrentPublicationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/mns#hasCurrentPublicationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has Current Publication Date" .
+# 
+# http://example.org/mns#hasFirstPublicationDate
+<http://example.org/mns#hasFirstPublicationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mns#hasFirstPublicationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+<http://example.org/mns#hasFirstPublicationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/mns#hasFirstPublicationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has First Publication Date" .
+# 
+# http://example.org/mns#hasStandardNumber
+<http://example.org/mns#hasStandardNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mns#hasStandardNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+<http://example.org/mns#hasStandardNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/mns#hasStandardNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has Standard Number" .
+# 
+# http://example.org/mns#isCEN
+<http://example.org/mns#isCEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mns#isCEN> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+<http://example.org/mns#isCEN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/mns#isCEN> <http://www.w3.org/2000/01/rdf-schema#label> "is CEN" .
+# 
+# http://example.org/mns#isISO
+<http://example.org/mns#isISO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mns#isISO> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Standard> .
+<http://example.org/mns#isISO> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/mns#isISO> <http://www.w3.org/2000/01/rdf-schema#label> "is ISO" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/mns#CENTechnicalCommittee
+<http://example.org/mns#CENTechnicalCommittee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/mns#CENTechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/i40/sto#TechnicalCommittee> .
+<http://example.org/mns#CENTechnicalCommittee> <http://purl.org/dc/terms/description> "A Technical Committee that belongs to CEN Standard Organisation" .
+<http://example.org/mns#CENTechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#label> "CEN Technical Committee" .
+# 
+# http://example.org/mns#ISOTechnicalCommittee
+<http://example.org/mns#ISOTechnicalCommittee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/mns#ISOTechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/i40/sto#TechnicalCommittee> .
+<http://example.org/mns#ISOTechnicalCommittee> <http://purl.org/dc/terms/description> "A Technical Committee that belongs to ISO Standard Organisation" .
+<http://example.org/mns#ISOTechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#label> "ISO Technical Committee" .
+# 
+# http://example.org/mns#ProjectPhase
+<http://example.org/mns#ProjectPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/mns#ProjectPhase> <http://purl.org/dc/terms/description> "A project phase indicates the phase of the project, for which a standard is relevant to.\nIn the context of the EC3 BIM  Stanadrds Landscape Explorer, the project phases corresponds to the RIBA plan of work."@en .
+<http://example.org/mns#ProjectPhase> <http://www.w3.org/2000/01/rdf-schema#comment> "Project Phase" .
+# 
+# http://example.org/mns#Role
+<http://example.org/mns#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/mns#Role> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/digitalconstruction/0.5/Agents#Agent> .
+<http://example.org/mns#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+# 
+# http://example.org/mns#Topic
+<http://example.org/mns#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/mns#Topic> <http://purl.org/dc/terms/description> "A Topic or Concept" .
+<http://example.org/mns#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic" .
+# 
+# http://omv.ontoware.org/2005/05/ontology#Ontology
+<http://omv.ontoware.org/2005/05/ontology#Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://omv.ontoware.org/2005/05/ontology#OntologyDomain
+<http://omv.ontoware.org/2005/05/ontology#OntologyDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omv.ontoware.org/2005/05/ontology#OntologyDomain> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/i40/sto#Domain> .
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Agent
+<https://w3id.org/digitalconstruction/0.5/Agents#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/0.5/Agents#Agent> <http://purl.org/dc/terms/description> "This class defines the roles that actors have. It is not necessarily the job title, but their role in the project." .
+# 
+# https://w3id.org/i40/sto#Domain
+<https://w3id.org/i40/sto#Domain> <http://purl.org/dc/terms/description> "Domains in the EC3 Standards Landscape Explorer are defined by the M&S committee" .
+# 
+# https://w3id.org/i40/sto#Standard
+<https://w3id.org/i40/sto#Standard> <http://purl.org/dc/terms/description> "A standard is subclass of a publication." .
+# 
+# https://w3id.org/i40/sto#TechnicalCommittee
+<https://w3id.org/i40/sto#TechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Committee" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/mns#Anchor
+<http://example.org/mns#Anchor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Anchor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#BIM
+<http://example.org/mns#BIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#BIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#BIMExecutionPlan
+<http://example.org/mns#BIMExecutionPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#BIMExecutionPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#Briefing
+<http://example.org/mns#Briefing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Briefing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#CEN
+<http://example.org/mns#CEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#CEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#StandardOrganization> .
+# 
+# http://example.org/mns#CEN_TR_17439
+<http://example.org/mns#CEN_TR_17439> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#CEN_TR_17439> <http://example.org/mns#hasAbstract> "The scope of this guidance is deliberately restricted..." .
+<http://example.org/mns#CEN_TR_17439> <http://example.org/mns#hasCurrentPublicationDate> "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/mns#CEN_TR_17439> <http://example.org/mns#hasStandardNumber> "CEN/TR 17439" .
+<http://example.org/mns#CEN_TR_17439> <http://example.org/mns#isCEN> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/mns#CEN_TR_17439> <http://example.org/mns#isISO> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://example.org/mns#COBie
+<http://example.org/mns#COBie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#COBie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#Classification
+<http://example.org/mns#Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#Client
+<http://example.org/mns#Client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#CommonDataEnvironment
+<http://example.org/mns#CommonDataEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#CommonDataEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#Construction
+<http://example.org/mns#Construction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Construction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#Contractor
+<http://example.org/mns#Contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#DataDictionary
+<http://example.org/mns#DataDictionary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#DataDictionary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#DataTemplate
+<http://example.org/mns#DataTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#DataTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#Decommissioning
+<http://example.org/mns#Decommissioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Decommissioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#Design
+<http://example.org/mns#Design> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Design> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#Designer
+<http://example.org/mns#Designer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Designer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#FM
+<http://example.org/mns#FM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#FM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#FacilityManager
+<http://example.org/mns#FacilityManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#FacilityManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#GIS
+<http://example.org/mns#GIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#GIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#GeographicInformationSystem
+<http://example.org/mns#GeographicInformationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#GeographicInformationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#HIS
+<http://example.org/mns#HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#Handover
+<http://example.org/mns#Handover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Handover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#IFC
+<http://example.org/mns#IFC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#IFC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#IndustrialAutomation
+<http://example.org/mns#IndustrialAutomation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#IndustrialAutomation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#InformationContainer
+<http://example.org/mns#InformationContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InformationContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#InformationDeliveryManual
+<http://example.org/mns#InformationDeliveryManual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InformationDeliveryManual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#InformationDeliveryPlan
+<http://example.org/mns#InformationDeliveryPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InformationDeliveryPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#InformationDeliverySpecification
+<http://example.org/mns#InformationDeliverySpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InformationDeliverySpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#InformationManagement
+<http://example.org/mns#InformationManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InformationManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#InformationModel
+<http://example.org/mns#InformationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InformationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#InformationRequirements
+<http://example.org/mns#InformationRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InformationRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#InternationalOrganisationOfStandardisation
+<http://example.org/mns#InternationalOrganisationOfStandardisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#InternationalOrganisationOfStandardisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#StandardOrganization> .
+# 
+# http://example.org/mns#LevelOfInformationNeed
+<http://example.org/mns#LevelOfInformationNeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#LevelOfInformationNeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#LinkedData
+<http://example.org/mns#LinkedData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#LinkedData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#Manufacturer
+<http://example.org/mns#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#ManufacturingConstruction
+<http://example.org/mns#ManufacturingConstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#ManufacturingConstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#ModelViewDefinition
+<http://example.org/mns#ModelViewDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#ModelViewDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#OperationMaintenance
+<http://example.org/mns#OperationMaintenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#OperationMaintenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#Other
+<http://example.org/mns#Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#PM
+<http://example.org/mns#PM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#PM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#PermitAgency
+<http://example.org/mns#PermitAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#PermitAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#Procurement
+<http://example.org/mns#Procurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Procurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#ProjectManager
+<http://example.org/mns#ProjectManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#ProjectManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#QualityManagement
+<http://example.org/mns#QualityManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#QualityManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#SoftwareDeveloper
+<http://example.org/mns#SoftwareDeveloper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#SoftwareDeveloper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Role> .
+# 
+# http://example.org/mns#SoftwareImplementation
+<http://example.org/mns#SoftwareImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#SoftwareImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#Topic> .
+# 
+# http://example.org/mns#StrategicDefinition
+<http://example.org/mns#StrategicDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#StrategicDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ProjectPhase> .
+# 
+# http://example.org/mns#Sustainability
+<http://example.org/mns#Sustainability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#Sustainability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#TechnicalProductDescription
+<http://example.org/mns#TechnicalProductDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#TechnicalProductDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/i40/sto#Domain> .
+# 
+# http://example.org/mns#ISO/TC_10/SC_8
+<http://example.org/mns#ISO/TC_10/SC_8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mns#ISO/TC_10/SC_8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ISOTechnicalCommittee> .
+# 
+# http://example.org/mnsl#ISO/TC_59/SC_13
+<http://example.org/mnsl#ISO/TC_59/SC_13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/mnsl#ISO/TC_59/SC_13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#ISOTechnicalCommittee> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442
+<http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mns#CENTechnicalCommittee> .
+<http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442> <http://www.w3.org/2002/07/owl#topDataProperty> "Yes" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#InformativeReference> <http://www.w3.org/2000/01/rdf-schema#label> "Informative Reference" .
+# 
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#NormativeReference> <http://www.w3.org/2000/01/rdf-schema#label> "Normative Reference" .
+# 
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#StandardReference> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Reference" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
