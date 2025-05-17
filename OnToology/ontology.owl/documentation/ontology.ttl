@@ -1,0 +1,534 @@
+@prefix : <http://example.org/mns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/mns#> .
+
+<http://example.org/mns> rdf:type owl:Ontology ;
+                          owl:versionIRI <http://example.org/mns/1.0> ;
+                          owl:imports <http://omv.ontoware.org/2005/05/ontology> ,
+                                      <https://w3id.org/i40/sto#> ,
+                                      <https://www.niso.org/standards-committees/ssos/ssos01.owl> ;
+                          <http://purl.org/dc/terms/contributor> "Marzia Bolpagni" ;
+                          <http://purl.org/dc/terms/creator> "Goran Sibenik"@en ,
+                                                             "Arghavan Akbarieh" ;
+                          <http://purl.org/dc/terms/issued> 15022025 ;
+                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                          <http://purl.org/dc/terms/title> "Modelling and Standards Ontology" ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "MnS" ;
+                          rdfs:label "Modelling and Standards Ontology" ;
+                          rdfs:seeAlso "BIM Standards Landscape Explorer: https://ec-3.org/BIM-Standards-Landscape-Explorer.html" ;
+                          owl:versionInfo 1.0 ;
+                          <https://w3id.org/i40/sto#publisher> "EC3 M&S Committee" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle> rdf:type owl:AnnotationProperty ;
+                                                                      rdfs:domain <https://w3id.org/i40/sto#Standard> .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/mns#essentiallyRelatedToTopic
+:essentiallyRelatedToTopic rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :relatedToTopic ;
+                           rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                           rdfs:range :Topic ;
+                           rdfs:label "Essentially Related To Topic" .
+
+
+###  http://example.org/mns#implicitlyRelatedToTopic
+:implicitlyRelatedToTopic rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :relatedToTopic ;
+                          rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                          rdfs:range :Topic ;
+                          rdfs:label "Implicitly Related To Topic" .
+
+
+###  http://example.org/mns#informativelyReferences
+:informativelyReferences rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :references ;
+                         rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                         rdfs:range <https://w3id.org/i40/sto#Publication> ;
+                         rdfs:label "Informatively References" .
+
+
+###  http://example.org/mns#isReferencedBy
+:isReferencedBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf :references ;
+                rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                rdfs:range <https://w3id.org/i40/sto#Publication> ;
+                rdfs:label "is Referenced By" .
+
+
+###  http://example.org/mns#normativelyReference
+:normativelyReference rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :references ;
+                      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                      rdfs:range <https://w3id.org/i40/sto#Publication> ;
+                      rdfs:label "Normatively References" .
+
+
+###  http://example.org/mns#references
+:references rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+            rdfs:range <https://w3id.org/i40/sto#Publication> ;
+            rdfs:label "References" .
+
+
+###  http://example.org/mns#relatedToPhase
+:relatedToPhase rdf:type owl:ObjectProperty ;
+                rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                rdfs:range :ProjectPhase ;
+                rdfs:label "Related To Phase" .
+
+
+###  http://example.org/mns#relatedToRole
+:relatedToRole rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+               rdfs:range :Role ;
+               rdfs:label "Related To Role" .
+
+
+###  http://example.org/mns#relatedToTopic
+:relatedToTopic rdf:type owl:ObjectProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                            <https://w3id.org/i40/sto#Publication>
+                                          )
+                            ] ;
+                rdfs:range :Topic ;
+                rdfs:label "Related To Topic" .
+
+
+###  http://example.org/mns#relevantlyRelatedToTopic
+:relevantlyRelatedToTopic rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :relatedToTopic ;
+                          rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+                          rdfs:range :Topic ;
+                          rdfs:label "Relevantly Related To Topic" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/mns#contributesToSDG
+:contributesToSDG rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                  rdfs:range xsd:integer ;
+                  rdfs:label "contributes To Sustainable Development Goal" .
+
+
+###  http://example.org/mns#hasAbstract
+:hasAbstract rdf:type owl:DatatypeProperty ;
+             rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+             rdfs:range xsd:string ;
+             rdfs:label "has Abstract" .
+
+
+###  http://example.org/mns#hasCurrentPublicationDate
+:hasCurrentPublicationDate rdf:type owl:DatatypeProperty ;
+                           rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                           rdfs:range xsd:date ;
+                           rdfs:label "has Current Publication Date" .
+
+
+###  http://example.org/mns#hasFirstPublicationDate
+:hasFirstPublicationDate rdf:type owl:DatatypeProperty ;
+                         rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                         rdfs:range xsd:date ;
+                         rdfs:label "has First Publication Date" .
+
+
+###  http://example.org/mns#hasStandardNumber
+:hasStandardNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has Standard Number" .
+
+
+###  http://example.org/mns#isCEN
+:isCEN rdf:type owl:DatatypeProperty ;
+       rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+       rdfs:range xsd:boolean ;
+       rdfs:label "is CEN" .
+
+
+###  http://example.org/mns#isISO
+:isISO rdf:type owl:DatatypeProperty ;
+       rdfs:domain <https://w3id.org/i40/sto#Standard> ;
+       rdfs:range xsd:boolean ;
+       rdfs:label "is ISO" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/mns#CENTechnicalCommittee
+:CENTechnicalCommittee rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/i40/sto#TechnicalCommittee> ;
+                       <http://purl.org/dc/terms/description> "A Technical Committee that belongs to CEN Standard Organisation" ;
+                       rdfs:label "CEN Technical Committee" .
+
+
+###  http://example.org/mns#ISOTechnicalCommittee
+:ISOTechnicalCommittee rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/i40/sto#TechnicalCommittee> ;
+                       <http://purl.org/dc/terms/description> "A Technical Committee that belongs to ISO Standard Organisation" ;
+                       rdfs:label "ISO Technical Committee" .
+
+
+###  http://example.org/mns#ProjectPhase
+:ProjectPhase rdf:type owl:Class ;
+              <http://purl.org/dc/terms/description> """A project phase indicates the phase of the project, for which a standard is relevant to.
+In the context of the EC3 BIM  Stanadrds Landscape Explorer, the project phases corresponds to the RIBA plan of work."""@en ;
+              rdfs:comment "Project Phase" .
+
+
+###  http://example.org/mns#Role
+:Role rdf:type owl:Class ;
+      owl:equivalentClass <https://w3id.org/digitalconstruction/0.5/Agents#Agent> ;
+      rdfs:label "Role" .
+
+
+###  http://example.org/mns#Topic
+:Topic rdf:type owl:Class ;
+       <http://purl.org/dc/terms/description> "A Topic or Concept" ;
+       rdfs:label "Topic" .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Ontology
+<http://omv.ontoware.org/2005/05/ontology#Ontology> rdf:type owl:Class .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyDomain
+<http://omv.ontoware.org/2005/05/ontology#OntologyDomain> rdf:type owl:Class ;
+                                                          owl:equivalentClass <https://w3id.org/i40/sto#Domain> .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Agents#Agent
+<https://w3id.org/digitalconstruction/0.5/Agents#Agent> rdf:type owl:Class ;
+                                                        <http://purl.org/dc/terms/description> "This class defines the roles that actors have. It is not necessarily the job title, but their role in the project." .
+
+
+###  https://w3id.org/i40/sto#Domain
+<https://w3id.org/i40/sto#Domain> <http://purl.org/dc/terms/description> "Domains in the EC3 Standards Landscape Explorer are defined by the M&S committee" .
+
+
+###  https://w3id.org/i40/sto#Standard
+<https://w3id.org/i40/sto#Standard> <http://purl.org/dc/terms/description> "A standard is subclass of a publication." .
+
+
+###  https://w3id.org/i40/sto#TechnicalCommittee
+<https://w3id.org/i40/sto#TechnicalCommittee> rdfs:label "Technical Committee" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/mns#Anchor
+:Anchor rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#BIM
+:BIM rdf:type owl:NamedIndividual ,
+              <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#BIMExecutionPlan
+:BIMExecutionPlan rdf:type owl:NamedIndividual ,
+                           :Topic .
+
+
+###  http://example.org/mns#Briefing
+:Briefing rdf:type owl:NamedIndividual ,
+                   :ProjectPhase .
+
+
+###  http://example.org/mns#CEN
+:CEN rdf:type owl:NamedIndividual ,
+              <https://w3id.org/i40/sto#StandardOrganization> .
+
+
+###  http://example.org/mns#CEN_TR_17439
+:CEN_TR_17439 rdf:type owl:NamedIndividual ;
+              :hasAbstract "The scope of this guidance is deliberately restricted..." ;
+              :hasCurrentPublicationDate "2020-06-10"^^xsd:date ;
+              :hasStandardNumber "CEN/TR 17439" ;
+              :isCEN "true"^^xsd:boolean ;
+              :isISO "false"^^xsd:boolean .
+
+
+###  http://example.org/mns#COBie
+:COBie rdf:type owl:NamedIndividual ,
+                :Topic .
+
+
+###  http://example.org/mns#Classification
+:Classification rdf:type owl:NamedIndividual ,
+                         :Topic .
+
+
+###  http://example.org/mns#Client
+:Client rdf:type owl:NamedIndividual ,
+                 :Role .
+
+
+###  http://example.org/mns#CommonDataEnvironment
+:CommonDataEnvironment rdf:type owl:NamedIndividual ,
+                                :Topic .
+
+
+###  http://example.org/mns#Construction
+:Construction rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#Contractor
+:Contractor rdf:type owl:NamedIndividual ,
+                     :Role .
+
+
+###  http://example.org/mns#DataDictionary
+:DataDictionary rdf:type owl:NamedIndividual ,
+                         :Topic .
+
+
+###  http://example.org/mns#DataTemplate
+:DataTemplate rdf:type owl:NamedIndividual ,
+                       :Topic .
+
+
+###  http://example.org/mns#Decommissioning
+:Decommissioning rdf:type owl:NamedIndividual ,
+                          :ProjectPhase .
+
+
+###  http://example.org/mns#Design
+:Design rdf:type owl:NamedIndividual ,
+                 :ProjectPhase .
+
+
+###  http://example.org/mns#Designer
+:Designer rdf:type owl:NamedIndividual ,
+                   :Role .
+
+
+###  http://example.org/mns#FM
+:FM rdf:type owl:NamedIndividual ,
+             <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#FacilityManager
+:FacilityManager rdf:type owl:NamedIndividual ,
+                          :Role .
+
+
+###  http://example.org/mns#GIS
+:GIS rdf:type owl:NamedIndividual ,
+              <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#GeographicInformationSystem
+:GeographicInformationSystem rdf:type owl:NamedIndividual ,
+                                      :Topic .
+
+
+###  http://example.org/mns#HIS
+:HIS rdf:type owl:NamedIndividual ,
+              <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#Handover
+:Handover rdf:type owl:NamedIndividual ,
+                   :ProjectPhase .
+
+
+###  http://example.org/mns#IFC
+:IFC rdf:type owl:NamedIndividual ,
+              :Topic .
+
+
+###  http://example.org/mns#IndustrialAutomation
+:IndustrialAutomation rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#InformationContainer
+:InformationContainer rdf:type owl:NamedIndividual ,
+                               :Topic .
+
+
+###  http://example.org/mns#InformationDeliveryManual
+:InformationDeliveryManual rdf:type owl:NamedIndividual ,
+                                    :Topic .
+
+
+###  http://example.org/mns#InformationDeliveryPlan
+:InformationDeliveryPlan rdf:type owl:NamedIndividual ,
+                                  :Topic .
+
+
+###  http://example.org/mns#InformationDeliverySpecification
+:InformationDeliverySpecification rdf:type owl:NamedIndividual ,
+                                           :Topic .
+
+
+###  http://example.org/mns#InformationManagement
+:InformationManagement rdf:type owl:NamedIndividual ,
+                                :Topic .
+
+
+###  http://example.org/mns#InformationModel
+:InformationModel rdf:type owl:NamedIndividual ,
+                           :Topic .
+
+
+###  http://example.org/mns#InformationRequirements
+:InformationRequirements rdf:type owl:NamedIndividual ,
+                                  :Topic .
+
+
+###  http://example.org/mns#InternationalOrganisationOfStandardisation
+:InternationalOrganisationOfStandardisation rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/i40/sto#StandardOrganization> .
+
+
+###  http://example.org/mns#LevelOfInformationNeed
+:LevelOfInformationNeed rdf:type owl:NamedIndividual ,
+                                 :Topic .
+
+
+###  http://example.org/mns#LinkedData
+:LinkedData rdf:type owl:NamedIndividual ,
+                     :Topic .
+
+
+###  http://example.org/mns#Manufacturer
+:Manufacturer rdf:type owl:NamedIndividual ,
+                       :Role .
+
+
+###  http://example.org/mns#ManufacturingConstruction
+:ManufacturingConstruction rdf:type owl:NamedIndividual ,
+                                    :ProjectPhase .
+
+
+###  http://example.org/mns#ModelViewDefinition
+:ModelViewDefinition rdf:type owl:NamedIndividual ,
+                              :Topic .
+
+
+###  http://example.org/mns#OperationMaintenance
+:OperationMaintenance rdf:type owl:NamedIndividual ,
+                               :ProjectPhase .
+
+
+###  http://example.org/mns#Other
+:Other rdf:type owl:NamedIndividual ,
+                <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#PM
+:PM rdf:type owl:NamedIndividual ,
+             <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#PermitAgency
+:PermitAgency rdf:type owl:NamedIndividual ,
+                       :Role .
+
+
+###  http://example.org/mns#Procurement
+:Procurement rdf:type owl:NamedIndividual ,
+                      :ProjectPhase .
+
+
+###  http://example.org/mns#ProjectManager
+:ProjectManager rdf:type owl:NamedIndividual ,
+                         :Role .
+
+
+###  http://example.org/mns#QualityManagement
+:QualityManagement rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#SoftwareDeveloper
+:SoftwareDeveloper rdf:type owl:NamedIndividual ,
+                            :Role .
+
+
+###  http://example.org/mns#SoftwareImplementation
+:SoftwareImplementation rdf:type owl:NamedIndividual ,
+                                 :Topic .
+
+
+###  http://example.org/mns#StrategicDefinition
+:StrategicDefinition rdf:type owl:NamedIndividual ,
+                              :ProjectPhase .
+
+
+###  http://example.org/mns#Sustainability
+:Sustainability rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#TechnicalProductDescription
+:TechnicalProductDescription rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/i40/sto#Domain> .
+
+
+###  http://example.org/mns#ISO/TC_10/SC_8
+<http://example.org/mns#ISO/TC_10/SC_8> rdf:type owl:NamedIndividual ,
+                                                 :ISOTechnicalCommittee .
+
+
+###  http://example.org/mnsl#ISO/TC_59/SC_13
+<http://example.org/mnsl#ISO/TC_59/SC_13> rdf:type owl:NamedIndividual ,
+                                                   :ISOTechnicalCommittee .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442
+<http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442> rdf:type owl:NamedIndividual ,
+                                                               :CENTechnicalCommittee ;
+                                                      owl:topDataProperty "Yes" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#InformativeReference> rdfs:label "Informative Reference" .
+
+
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#NormativeReference> rdfs:label "Normative Reference" .
+
+
+<https://www.niso.org/standards-committees/ssos/ssos01.owl#StandardReference> rdfs:label "Standard Reference" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,720 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://omv.ontoware.org/2005/05/ontology#Ontology"
+    }, {
+      "@id" : "https://w3id.org/i40/sto#Publication"
+    } ]
+  } ]
+}, {
+  "@id" : "http://example.org/mns",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Marzia Bolpagni"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "Goran Sibenik"
+  }, {
+    "@value" : "Arghavan Akbarieh"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "15022025"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Modelling and Standards Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "MnS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Modelling and Standards Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "BIM Standards Landscape Explorer: https://ec-3.org/BIM-Standards-Landscape-Explorer.html"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://omv.ontoware.org/2005/05/ontology"
+  }, {
+    "@id" : "https://w3id.org/i40/sto#"
+  }, {
+    "@id" : "https://www.niso.org/standards-committees/ssos/ssos01.owl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://example.org/mns/1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ],
+  "https://w3id.org/i40/sto#publisher" : [ {
+    "@value" : "EC3 M&S Committee"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Anchor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#BIM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#BIMExecutionPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Briefing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#CEN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/i40/sto#StandardOrganization" ]
+}, {
+  "@id" : "http://example.org/mns#CENTechnicalCommittee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A Technical Committee that belongs to CEN Standard Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CEN Technical Committee"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/i40/sto#TechnicalCommittee"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#CEN_TR_17439",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/mns#hasAbstract" : [ {
+    "@value" : "The scope of this guidance is deliberately restricted..."
+  } ],
+  "http://example.org/mns#hasCurrentPublicationDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2020-06-10"
+  } ],
+  "http://example.org/mns#hasStandardNumber" : [ {
+    "@value" : "CEN/TR 17439"
+  } ],
+  "http://example.org/mns#isCEN" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://example.org/mns#isISO" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#COBie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Classification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Client",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#CommonDataEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Construction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Contractor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#DataDictionary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#DataTemplate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Decommissioning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Design",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Designer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#FM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#FacilityManager",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#GIS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#GeographicInformationSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#HIS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Handover",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#IFC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#ISO/TC_10/SC_8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ISOTechnicalCommittee"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#ISOTechnicalCommittee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A Technical Committee that belongs to ISO Standard Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ISO Technical Committee"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/i40/sto#TechnicalCommittee"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#IndustrialAutomation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InformationContainer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InformationDeliveryManual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InformationDeliveryPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InformationDeliverySpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InformationManagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InformationModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InformationRequirements",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#InternationalOrganisationOfStandardisation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/i40/sto#StandardOrganization" ]
+}, {
+  "@id" : "http://example.org/mns#LevelOfInformationNeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#LinkedData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Manufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#ManufacturingConstruction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#ModelViewDefinition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#OperationMaintenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#PM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#PermitAgency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Procurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#ProjectManager",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#ProjectPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "A project phase indicates the phase of the project, for which a standard is relevant to.\nIn the context of the EC3 BIM  Stanadrds Landscape Explorer, the project phases corresponds to the RIBA plan of work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Project Phase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#QualityManagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Role"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Agent"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#SoftwareDeveloper",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#SoftwareImplementation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#StrategicDefinition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Sustainability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#TechnicalProductDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#Topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A Topic or Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#contributesToSDG",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contributes To Sustainable Development Goal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#essentiallyRelatedToTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Essentially Related To Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://example.org/mns#relatedToTopic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#hasAbstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has Abstract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#hasCurrentPublicationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has Current Publication Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#hasFirstPublicationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has First Publication Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#hasStandardNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has Standard Number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#implicitlyRelatedToTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Implicitly Related To Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://example.org/mns#relatedToTopic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#informativelyReferences",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Informatively References"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://example.org/mns#references"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#isCEN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is CEN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#isISO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is ISO"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#isReferencedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is Referenced By"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/mns#references"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#normativelyReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Normatively References"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://example.org/mns#references"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#references",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "References"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#relatedToPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Related To Phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/mns#ProjectPhase"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#relatedToRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Related To Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/mns#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#relatedToTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Related To Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ]
+}, {
+  "@id" : "http://example.org/mns#relevantlyRelatedToTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relevantly Related To Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/mns#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://example.org/mns#relatedToTopic"
+  } ]
+}, {
+  "@id" : "http://example.org/mnsl#ISO/TC_59/SC_13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#ISOTechnicalCommittee"
+  } ]
+}, {
+  "@id" : "http://omv.ontoware.org/2005/05/ontology#Ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://omv.ontoware.org/2005/05/ontology#OntologyDomain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/i40/sto#Domain"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.co-ode.org/ontologies/ont.owl#CEN/TC_442",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/mns#CENTechnicalCommittee"
+  } ],
+  "http://www.w3.org/2002/07/owl#topDataProperty" : [ {
+    "@value" : "Yes"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "This class defines the roles that actors have. It is not necessarily the job title, but their role in the project."
+  } ]
+}, {
+  "@id" : "https://w3id.org/i40/sto#Domain",
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Domains in the EC3 Standards Landscape Explorer are defined by the M&S committee"
+  } ]
+}, {
+  "@id" : "https://w3id.org/i40/sto#Standard",
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A standard is subclass of a publication."
+  } ]
+}, {
+  "@id" : "https://w3id.org/i40/sto#TechnicalCommittee",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Technical Committee"
+  } ]
+}, {
+  "@id" : "https://www.niso.org/standards-committees/ssos/ssos01.owl#InformativeReference",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Informative Reference"
+  } ]
+}, {
+  "@id" : "https://www.niso.org/standards-committees/ssos/ssos01.owl#NormativeReference",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Normative Reference"
+  } ]
+}, {
+  "@id" : "https://www.niso.org/standards-committees/ssos/ssos01.owl#StandardReference",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Standard Reference"
+  } ]
+}, {
+  "@id" : "https://www.niso.org/standards-committees/ssos/ssos01.owl#fullTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/i40/sto#Standard"
+  } ]
+} ]
